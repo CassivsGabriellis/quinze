@@ -12,7 +12,7 @@
 	<artifactId>quinze</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>quinze</name>
-	<description>Projeto combinações quinze</description>
+	<description>Projeto de combinações Quinze</description>
 	<properties>
 		<java.version>11</java.version>
 	</properties>
@@ -50,6 +50,11 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<version>42.6.0</version>
 		</dependency>
 	</dependencies>
 
