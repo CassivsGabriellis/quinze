@@ -15,23 +15,23 @@ public class CombinationNumber {
     private Long id;
 
     @Column(nullable = false)
-    private LocalDateTime creationTime;
+    private LocalDateTime data;
 
     @Column(nullable = false)
-    private Integer number1;
+    private Integer numero1;
 
     @Column(nullable = false)
-    private Integer number2;
+    private Integer numero2;
 
     @Column(nullable = false)
-    private Integer number3;
+    private Integer numero3;
 
     @Column(nullable = false)
-    private Integer number4;
+    private Integer numero4;
 
     @Column(nullable = false)
-    private Integer number5;
+    private Integer numero5;
 
     @Column(nullable = false)
-    private Integer number6;
+    private Integer numero6;
 }

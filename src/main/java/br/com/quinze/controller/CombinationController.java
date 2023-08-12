@@ -8,13 +8,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/combinations")
+@RequestMapping("/api/v1/combinations")
 public class CombinationController {
 
     private final CombinationService combinationService;
@@ -26,10 +27,10 @@ public class CombinationController {
         this.numberRepository = numberRepository;
     }
 
-    @GetMapping("/generate")
+    @PostMapping ("/generate")
     public ResponseEntity<CombinationNumber> generateCombination() {
         CombinationNumber combination = combinationService.generateCombination();
-        return new ResponseEntity<>(combination, HttpStatus.OK);
+        return new ResponseEntity<>(combination, HttpStatus.CREATED);
     }
 
     @GetMapping("/all")

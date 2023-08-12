@@ -22,13 +22,13 @@ public class CombinationService {
         List<Integer> shuffledNumbers = generateShuffledNumbers();
 
         CombinationNumber newCombination = new CombinationNumber();
-        newCombination.setNumber1(shuffledNumbers.get(0));
-        newCombination.setNumber2(shuffledNumbers.get(1));
-        newCombination.setNumber3(shuffledNumbers.get(2));
-        newCombination.setNumber4(shuffledNumbers.get(3));
-        newCombination.setNumber5(shuffledNumbers.get(4));
-        newCombination.setNumber6(shuffledNumbers.get(5));
-        newCombination.setCreationTime(LocalDateTime.now());
+        newCombination.setNumero1(shuffledNumbers.get(0));
+        newCombination.setNumero2(shuffledNumbers.get(1));
+        newCombination.setNumero3(shuffledNumbers.get(2));
+        newCombination.setNumero4(shuffledNumbers.get(3));
+        newCombination.setNumero5(shuffledNumbers.get(4));
+        newCombination.setNumero6(shuffledNumbers.get(5));
+        newCombination.setData(LocalDateTime.now());
 
         return numberRepository.save(newCombination);
     }
