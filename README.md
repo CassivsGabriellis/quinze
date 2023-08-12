@@ -1,6 +1,6 @@
 # Documentação da API do Projeto Quinze
-Esta é a documentação da API para o projeto Quinze, que permite gerar combinações de números entre 1 e 60, 
-retornando 6 números dentre aqueles, de forma aleatória.
+Esta é a documentação da API para o projeto Quinze, que permite gerar combinações de números entre 1 e 25, 
+retornando 15 números dentre aqueles de forma aleatória.
 
 ## Endpoints da API
 
@@ -14,13 +14,24 @@ Resposta de exemplo:
 ```json
 {
   "id": 1,
-  "data": "2023-08-12T06:43:56.959307",
-  "numero1": 19,
-  "numero2": 15,
-  "numero3": 44,
-  "numero4": 20,
-  "numero5": 12,
-  "numero6": 1
+  "data": "2023-08-12T17:05:21.644895",
+  "numeros": {
+    "numero1": 24,
+    "numero2": 18,
+    "numero3": 4,
+    "numero4": 3,
+    "numero5": 22,
+    "numero6": 5,
+    "numero7": 6,
+    "numero8": 16,
+    "numero9": 19,
+    "numero10": 12,
+    "numero11": 25,
+    "numero12": 9,
+    "numero13": 2,
+    "numero14": 10,
+    "numero15": 23
+  }
 }
 ```
 
@@ -35,24 +46,47 @@ Resposta de exemplo:
 [
   {
     "id": 1,
-    "data": "2023-08-12T06:43:56.959307",
-    "numero1": 19,
-    "numero2": 15,
-    "numero3": 44,
-    "numero4": 20,
-    "numero5": 12,
-    "numero6": 1
+    "data": "2023-08-12T17:05:21.644895",
+    "numeros": {
+      "numero1": 24,
+      "numero2": 18,
+      "numero3": 4,
+      "numero4": 3,
+      "numero5": 22,
+      "numero6": 5,
+      "numero7": 6,
+      "numero8": 16,
+      "numero9": 19,
+      "numero10": 12,
+      "numero11": 25,
+      "numero12": 9,
+      "numero13": 2,
+      "numero14": 10,
+      "numero15": 23
+    }
   },
   {
     "id": 2,
-    "data": "2023-08-12T06:46:37.805553",
-    "numero1": 22,
-    "numero2": 49,
-    "numero3": 48,
-    "numero4": 19,
-    "numero5": 13,
-    "numero6": 14
+    "data": "2023-08-12T17:05:22.98191",
+    "numeros": {
+      "numero1": 4,
+      "numero2": 15,
+      "numero3": 17,
+      "numero4": 12,
+      "numero5": 25,
+      "numero6": 1,
+      "numero7": 18,
+      "numero8": 22,
+      "numero9": 7,
+      "numero10": 16,
+      "numero11": 8,
+      "numero12": 10,
+      "numero13": 24,
+      "numero14": 11,
+      "numero15": 21
+    }
   }
+  // Etc
 ]
 ```
 

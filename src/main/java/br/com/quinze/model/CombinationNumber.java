@@ -4,6 +4,7 @@ import lombok.Data;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Data
 @Entity
@@ -34,4 +35,31 @@ public class CombinationNumber {
 
     @Column(nullable = false)
     private Integer numero6;
+
+    @Column(nullable = false)
+    private Integer numero7;
+
+    @Column(nullable = false)
+    private Integer numero8;
+
+    @Column(nullable = false)
+    private Integer numero9;
+
+    @Column(nullable = false)
+    private Integer numero10;
+
+    @Column(nullable = false)
+    private Integer numero11;
+
+    @Column(nullable = false)
+    private Integer numero12;
+
+    @Column(nullable = false)
+    private Integer numero13;
+
+    @Column(nullable = false)
+    private Integer numero14;
+
+    @Column(nullable = false)
+    private Integer numero15;
 }
