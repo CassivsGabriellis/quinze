@@ -43,7 +43,7 @@ public class CombinationService {
         return numberRepository.save(newCombination);
     }
 
-    private List<Integer> generateShuffledNumbers() {
+    List<Integer> generateShuffledNumbers() {
         List<Integer> numbers = new ArrayList<>();
         for (int i = 1; i <= 25; i++) {
             numbers.add(i);
