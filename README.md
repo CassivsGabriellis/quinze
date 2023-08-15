@@ -4,8 +4,7 @@ retornando 15 números dentre aqueles de forma aleatória.
 
 ## Endpoints da API
 
-#### Gerar Combinação
-_Endpoint_ para gerar uma nova combinação de números.
+#### Gera uma nova combinação:
 
 - **URL: `/api/v1/combinations/generate`**
 - **Método: `POST`**
@@ -35,8 +34,7 @@ Resposta de exemplo:
 }
 ```
 
-#### Listar todas as combinações
-_Endpoint_ para listar todas as combinações geradas.
+#### Lista todas as combinações geradas:
 
 - **URL: `/api/v1/combinations/all`**
 - **Método: `GET`**
@@ -88,5 +86,41 @@ Resposta de exemplo:
   }
   // Etc
 ]
+```
+
+#### Lista a frequência de saída de cada um dos números:
+
+- **URL: `/api/v1/combinations/statistics/number-frequency`**
+- **Método: `GET`**
+
+Resposta de exemplo:
+```json
+{
+  "numero1": 7,
+  "numero2": 5,
+  "numero3": 5,
+  "numero4": 4,
+  "numero5": 5,
+  "numero6": 6,
+  "numero7": 7,
+  "numero8": 3,
+  "numero9": 3,
+  "numero10": 5,
+  "numero11": 6,
+  "numero12": 8,
+  "numero13": 6,
+  "numero14": 6,
+  "numero15": 6,
+  "numero16": 5,
+  "numero17": 9,
+  "numero18": 6,
+  "numero19": 7,
+  "numero20": 8,
+  "numero21": 6,
+  "numero22": 6,
+  "numero23": 7,
+  "numero24": 9,
+  "numero25": 5
+}
 ```
 

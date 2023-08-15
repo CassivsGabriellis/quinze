@@ -50,6 +50,18 @@ public class CombinationController {
         return new ResponseEntity<>(responseList, HttpStatus.OK);
     }
 
+    @GetMapping("/statistics/number-frequency")
+    public ResponseEntity<Map<String, Integer>> getNumberFrequency() {
+        Map<Integer, Long> numberFrequency = combinationService.getNumberFrequency();
+
+        // Convert the number frequency map to the desired format
+        Map<String, Integer> formattedNumberFrequency = new LinkedHashMap<>();
+        for (int i = 1; i <= 25; i++) {
+            formattedNumberFrequency.put("numero" + i, numberFrequency.getOrDefault(i, 0L).intValue());
+        }
+
+        return new ResponseEntity<>(formattedNumberFrequency, HttpStatus.OK);
+    }
 
     private Map<String, Object> createCombinationResponse(CombinationNumber combination) {
         Map<String, Object> response = new LinkedHashMap<>();
