@@ -52,6 +52,7 @@ public class CombinationService {
     }
 
     // Informa a frequência de saída de cada um dos números
+    // gerados pelo usuário
     public Map<Integer, Long> getNumberFrequency() {
         List<CombinationNumber> combinations = numberRepository.findAll();
         Map<Integer, Long> numberFrequency = new HashMap<>();
@@ -64,6 +65,17 @@ public class CombinationService {
         }
 
         return numberFrequency;
+    }
+
+    public Map<String, Integer> getFormattedNumberFrequency() {
+        Map<Integer, Long> numberFrequency = getNumberFrequency();
+
+        Map<String, Integer> formattedNumberFrequency = new LinkedHashMap<>();
+        for (int i = 1; i <= 25; i++) {
+            formattedNumberFrequency.put("numero" + i, numberFrequency.getOrDefault(i, 0L).intValue());
+        }
+
+        return formattedNumberFrequency;
     }
 
     private int getNumberFromCombination(CombinationNumber combination, int index) {
@@ -103,4 +115,45 @@ public class CombinationService {
         }
     }
 
+    public Map<String, Object> createCombinationResponse(CombinationNumber combination) {
+        Map<String, Object> response = new LinkedHashMap<>();
+        response.put("id", combination.getId());
+        response.put("data", combination.getData());
+        response.put("numeros", createNumerosMap(combination));
+
+        return response;
+    }
+
+    private Map<String, Integer> createNumerosMap(CombinationNumber combination) {
+        Map<String, Integer> numerosMap = new LinkedHashMap<>();
+        numerosMap.put("numero1", combination.getNumero1());
+        numerosMap.put("numero2", combination.getNumero2());
+        numerosMap.put("numero3", combination.getNumero3());
+        numerosMap.put("numero4", combination.getNumero4());
+        numerosMap.put("numero5", combination.getNumero5());
+        numerosMap.put("numero6", combination.getNumero6());
+        numerosMap.put("numero7", combination.getNumero7());
+        numerosMap.put("numero8", combination.getNumero8());
+        numerosMap.put("numero9", combination.getNumero9());
+        numerosMap.put("numero10", combination.getNumero10());
+        numerosMap.put("numero11", combination.getNumero11());
+        numerosMap.put("numero12", combination.getNumero12());
+        numerosMap.put("numero13", combination.getNumero13());
+        numerosMap.put("numero14", combination.getNumero14());
+        numerosMap.put("numero15", combination.getNumero15());
+
+        return numerosMap;
+    }
+
+    public List<Map<String, Object>> getAllCombinations() {
+        List<CombinationNumber> combinations = numberRepository.findAll();
+        List<Map<String, Object>> responseList = new ArrayList<>();
+
+        for (CombinationNumber combination : combinations) {
+            Map<String, Object> response = createCombinationResponse(combination);
+            responseList.add(response);
+        }
+
+        return responseList;
+    }
 }
