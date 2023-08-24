@@ -43,5 +43,4 @@ public class CombinationController {
         Map<String, Integer> formattedNumberFrequency = combinationService.getFormattedNumberFrequency();
         return new ResponseEntity<>(formattedNumberFrequency, HttpStatus.OK);
     }
-
 }
